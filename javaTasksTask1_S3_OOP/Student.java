@@ -1,16 +1,12 @@
 package javaTasks.javaTasksTask1_S3_OOP;
 
-public class Student implements Comparable<Student> {
+public class Student extends User implements Comparable<Student> {
     public Long studentID;
-    public String firstName;
-    public String secondName;
-    public String lastName;
 
     public Student(Long studentID, String firstName, String secondName, String lastName) {
+        super(firstName, secondName, lastName);
         this.studentID = studentID;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.lastName = lastName;
+
     }
 
 
@@ -29,9 +25,7 @@ public class Student implements Comparable<Student> {
     public String toString() {
         return "Student{" +
                 "studentID=" + studentID +
-                ", firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                super.toString()+
                 '}' + "\r\n";
     }
 }

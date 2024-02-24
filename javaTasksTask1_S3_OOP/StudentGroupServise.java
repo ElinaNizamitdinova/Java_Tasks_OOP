@@ -1,5 +1,7 @@
 package javaTasks.javaTasksTask1_S3_OOP;
 
+import javaTasks.javaTasksTask1_S3_OOP.UserComparator;
+
 import java.util.*;
 
 public class StudentGroupServise {
@@ -22,7 +24,7 @@ public class StudentGroupServise {
 
     public List<Student> getSortedStudentGroupByFIO(){
         List<Student> result = new ArrayList<>(studentGroup.studentList);
-        result.sort(new StudentComparator());
+        result.sort(new UserComparator<Student>());
         return result;
     }
 }

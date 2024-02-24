@@ -16,6 +16,29 @@ public class Main {
         studentGroup.studentList.add(student3);
         studentGroup.studentList.add(student4);
 
+
+        Teacher teacher1 = new Teacher(56,"Aa","Bb","Dd");
+        Teacher teacher2 = new Teacher(56,"AA","BB","DD");
+        Teacher teacher3 = new Teacher(56,"Aaa","Bbb","Ddd");
+        Teacher teacher4 = new Teacher(56,"aa","bb","dd");
+        List<Teacher> teacherList = new ArrayList<>();
+        teacherList.add(teacher1);
+        teacherList.add(teacher2);
+        teacherList.add(teacher3);
+        teacherList.add(teacher4);
+        TeacherService teacherService = new TeacherService(teacherList);
+        System.out.println("**---------------------------**");
+        TeacherView teacherView = new TeacherView();
+        teacherView.sendToConsole(teacherList);
+        System.out.println("**---------------------------**");
+
+
+
+        System.out.println("*---------------------------*");
+        StudentView studentView = new StudentView();
+        studentView.sendToConsole(studentGroup.studentList);
+        System.out.println("*---------------------------*");
+
         StudentGroupServise service = new StudentGroupServise(studentGroup);
         for (Student student : studentGroup) {
             System.out.println(student);
