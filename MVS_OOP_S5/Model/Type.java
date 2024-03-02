@@ -1,7 +1,6 @@
-package javaTasks.MVC_Task_S5_OOP.model;
+package javaTasks.MVS_OOP_S5.Model;
 
 public enum Type {
     STUDENT,
     TEACHER
-
 }

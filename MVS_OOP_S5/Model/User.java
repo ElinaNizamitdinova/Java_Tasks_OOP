@@ -1,6 +1,6 @@
-package javaTasks.MVC_Task_S5_OOP.model;
+package javaTasks.MVS_OOP_S5.Model;
 
-public  abstract class User {
+public abstract class User {
     private String firstName;
     private String secondName;
     private String lastName;
