@@ -2,7 +2,10 @@ package javaTasks.MVS_OOP_S5;
 
 
 import javaTasks.MVS_OOP_S5.Controller.Controller;
+import javaTasks.MVS_OOP_S5.Model.Student;
 import javaTasks.MVS_OOP_S5.Model.Teacher;
+
+import java.util.List;
 
 public class Main {public static void main(String[] args) {
     Controller controller = new Controller();
@@ -10,12 +13,14 @@ public class Main {public static void main(String[] args) {
     controller.createStudent("Aa", "aa", "2");
     controller.createStudent("aaA", "n", "m");
     controller.createStudent("Am", "na", "p");
-    controller.getAllStudent();
-    controller.createTeacher("Teacher","NN","pp");
+    List<Student> students = controller.getAllStudent();
+    controller.getAllStudentConsole();
+    Teacher teacher = controller.createTeacher("Teacher","NN","pp");
     controller.getAllTeacher();
 
-    /**controller.createGroup();
-    controller.getAllGroup();**/
+
+    controller.createStudentGroup(teacher,students);
+
 
 }
 }

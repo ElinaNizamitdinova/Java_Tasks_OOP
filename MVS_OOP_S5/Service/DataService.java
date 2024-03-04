@@ -23,6 +23,23 @@ public class DataService {
             userList.add(teacher);
         }
     }
+    public User GetAndCreate(String firstName, String secondName,
+                       String lastName, Type type){
+        User user;
+        int id = getFreeId(type);
+        if(Type.STUDENT == type){
+            user = new Student(firstName,secondName,lastName,id);
+            userList.add(user);
+            return user;
+        }
+        else if(Type.TEACHER == type){
+            user = new Teacher(firstName,secondName,lastName,id);
+            userList.add(user);
+            return user;
+        }
+        return null;
+    }
+
 
     private int getFreeId(Type type){
         boolean itsStudent = Type.STUDENT == type;
