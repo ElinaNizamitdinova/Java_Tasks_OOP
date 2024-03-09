@@ -1,2 +1,4 @@
-package javaTasks.S6_SOLID_OOP_Homework;public class Main {
+package javaTasks.S6_SOLID_OOP_Homework;
+
+public class Main {
 }
