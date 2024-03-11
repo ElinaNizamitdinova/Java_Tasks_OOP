@@ -17,7 +17,7 @@ public class Controller {
             Scanner scanner = new Scanner(System.in);
             Calculator calculator = new Calculator();
             OperationView view = new OperationView();
-            System.out.println("Введите номер выбронного пункта");
+            System.out.println("Введите номер пункта меню: ");
             int operation = scanner.nextInt();
             if (operation < 4) {
                 System.out.print("Введите первое число: ");

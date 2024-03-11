@@ -17,7 +17,7 @@ public class Calculator {
             result = numberA / numberB;
             return result;
         } else {
-            throw new ArithmeticException("Division by zero is not performed");
+            throw new ArithmeticException("Недопустимое действие, деление на 0 невозможно произвести");
         }
     }
 

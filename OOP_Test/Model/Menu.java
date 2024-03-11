@@ -3,9 +3,9 @@ package javaTasks.OOP_Test.Model;
 import java.util.Arrays;
 
 public class Menu {
-
-    public String[] main_menu = {"Сложить числа",
-            "Перемножить числа", "Разделить числа",
+// сложение, умножение и деление
+    public String[] main_menu = {"Сложение",
+            "Умножение", "Деление",
             "Выход"};
 
 
