@@ -38,11 +38,12 @@ public class UserController {
     }
 
     private static void dataFormatCheck(String lastName, String firstName, String secondName, String dateOfBirth, String phoneNumber, String gender) {
-        if (dateFormatCheck(dateOfBirth)) {
+
+        if (!dateFormatCheck(dateOfBirth)) {
             throw new IllegalArgumentException("Неверный формат даты рождения");
         }
 
-        if (phoneFormatCheck(phoneNumber)) {
+        if (!phoneFormatCheck(phoneNumber)) {
             throw new IllegalArgumentException("Неверный формат номера телефона");
         }
         if (!genderFormatCheck(gender)) {
@@ -52,26 +53,34 @@ public class UserController {
     }
 
     private static boolean dateFormatCheck(String dateOfBirth) {
-        SimpleDateFormat myFormat = new SimpleDateFormat("dd.MM.yyyy");
-        myFormat.setLenient(false);
-        try {
-            myFormat.parse(dateOfBirth);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+        return dateOfBirth.matches("\\d{2}\\.\\d{2}\\.\\d{4}");
+
+
+//        SimpleDateFormat myFormat = new SimpleDateFormat("dd.MM.yy");
+//        myFormat.setLenient(false);
+//        try {
+//            myFormat.parse(dateOfBirth);
+//            System.out.println(dateOfBirth);
+//            return true;
+//        } catch (Exception e) {
+//            System.out.println("2");
+//            return false;
+//        }
 
     }
 
 
 
     private static boolean phoneFormatCheck(String phoneNumber) {
-        try {
-            int phone = Integer.parseInt(phoneNumber);
-            return true;
-        }catch (Exception e){
-            return false;
-        }
+        boolean isInteger = phoneNumber.matches("-?\\d+");
+        return isInteger;
+
+//        try {
+//            int phone = Integer.parseInt(phoneNumber);
+//            return true;
+//        }catch (Exception e){
+//            return false;
+//        }
     }
 
     private static boolean genderFormatCheck(String gender) {
