@@ -96,7 +96,10 @@ public class UserController {
             writer.write(userData);
             writer.newLine();
             writer.close();
-            System.out.println("Запись успешно создана "+filename);
+            System.out.println("Запись успешно создана в файле  "+filename);
+            UserView view = new UserView();
+            view.printUserInformation(user);
+
         } catch (IOException e) {
             System.out.println("Ошибка при создании записи");
         }
